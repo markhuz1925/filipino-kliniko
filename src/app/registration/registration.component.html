@@ -1,0 +1,40 @@
+<div class="modal-content">
+  <!-- Modal Header -->
+  <div class="modal-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+
+           <div class="pull-left">
+            <h3>Step {{ step }} / 3</h3>
+            <p>Tell us who you are:</p>
+          </div>
+
+          <div class="pull-right" style="font-size:80px; padding-right: 10px">
+            <i class="fa fa-user-md lg"></i>            
+          </div> 
+
+        </div>        
+      </div>      
+    </div>
+  </div>
+
+  <!-- Modal Content-->
+  <div class="modal-body form-bottom">
+     <div class="row">
+      <div class="col-sm-12 form-box">
+
+        <div [ngStyle]="{'display': displayStepOne}">
+          <register-step-one (onPageValidation)="checkStepOne($event)">
+          </register-step-one>
+        </div>
+        <div [ngStyle]="{'display': displayStepTwo}">
+          <register-step-two>
+          </register-step-two>
+        </div> 
+
+      </div>
+    </div> 
+  </div>
+
+</div>
